@@ -19,7 +19,7 @@
                         <div class="phonricon">
                             <i class="fa-solid fa-phone"></i>
                         </div>
-                        <p class="number">+55 66 88 99</p>
+                        <p class="number">+55 66 77 88 99</p>
                     </div>
                     <div class="topemail">
                         <div class="emailicon">
@@ -37,39 +37,60 @@
         
         
         <!-- topnav start -->
-       
-            <div class="topnav">
-                <div class="navlogo">
-                    <div class="carlogo">
-                        <div class="caricon">
-                            <i class="fa-solid fa-car"></i>
+            <nav class="navbar">
+                <div class="logo-nav">
+                    <div class="navlogo">
+                        <div class="carlogo">
+                            <div class="caricon">
+                                <i class="fa-solid fa-car"></i>
+                            </div>
+                        </div>
+                        <div class="carhouse">
+                            <p><span class="cartex">THE</span><br>carhouse</p>
                         </div>
                     </div>
-                    <div class="carhouse">
-                        <p><span class="cartex">THE</span><br>carhouse</p>
-                    </div>
-                </div>
-        
-                <div class="navbar_menu">
-                    <label for="toggle">
-                        <button class="toggle-menu">
-                            <i class="fa-solid fa-bars"></i>
-                        </button>
-                    </label>
-                    <ul class="list_items">
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">CAR LISTING</a></li>
-                        <li><a href="#">ABOUT US</a></li>
-                        <li><a href="#">SELLER</a></li>
-                        <li><a href="#">BUYER</a></li>
-                        <li><a href="#">CONTACT US</a></li>
-                    </ul>
                 </div>
                 
+                <div id="menuList">
+                    <a href="#">Home</a>
+                    <a href="#">Car Listing</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Seller</a>
+                    <a href="#">Buyer</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div class="menu_icon">
+                    <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+                </div>
+            </nav>
+            <div id="mobile_nav">
+                <a href="#">Home</a>
+                <a href="#">Car Listing</a>
+                <a href="#">About Us</a>
+                <a href="#">Seller</a>
+                <a href="#">Buyer</a>
+                <a href="#">Contact Us</a>
             </div>
+
+            <script>
+                let mobile_nav = document.getElementById("mobile_nav");
                 
-                 
-            </div>         
+                window.addEventListener("resize", function(event) {
+                    if(window.innerWidth > 600){
+                        mobile_nav.style.display = "none"
+                    }
+                })
+            
+                function toggleMenu(){
+                    if(mobile_nav.style.display == "flex"){
+                        mobile_nav.style.display = "none"
+                    }
+                    else{
+                        mobile_nav.style.display = "flex"
+                    }
+                }
+              </script>
+              <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous" ></script>
             <!-- topnav End -->
 
             
@@ -559,5 +580,9 @@
                 </div>
               </div>
               <!-- footer end -->
+              
 </body>
+
+
+
 </html>

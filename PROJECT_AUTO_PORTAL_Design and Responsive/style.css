@@ -11,6 +11,8 @@
     width: 100%;
     background-color: rgb(181, 247, 247);
 }
+
+
  /* top header start */
 .topheader{
     width: 100%;
@@ -67,18 +69,21 @@
 
 
 /* topnav start */
-
-.topnav{
-    height: 70px;
-    width: auto;
+.navbar{
+    padding: 10px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #fdffff;
+    background: cadetblue;
+    position: relative;
+    height: 70px;
+}
+.logo-nav{
+    color: white;
 }
 .navlogo{
     display: flex;
-    margin-left: 70px;
+    margin-left: 30px;
     gap: 10px;
     align-items: center;
 }
@@ -87,7 +92,6 @@
     width: 50px;
     background-color: #ef500d;
 }
-
 .caricon{
     padding: 15px 0px 0px 15px;
     font-size: 1.3rem;
@@ -98,34 +102,43 @@
     font-size: 1.3rem;
 }
 .cartex{
-    color: #a9aba8;
+    color: #d8f1cb;
 }
-.list_items{
-    display: flex;
-    margin-right: 70px;
-    gap: 30px;
-    list-style-type: none;
+#menuList{
+    align-items: center;
+    padding-right: 30px;
 }
-ul li a{
-    text-decoration: none;
-    font-weight: 600;
+#menuList a{
+    margin: 15px;
+    color: white;
 }
-ul li a:hover{
-    background-color: #a9aba8;
+
+#menuList a:hover{
+    background-color: #6b7566;
     border-radius: 3px;
 }
-
-
-
-
-/* Dropdown menu start */
-.toggle-menu{
-    display: none;
-    height: 40px;
-    width: 40px;
+.menuList, .mobile_nav, a {
+    text-decoration: none;
+    font-size: 20px;
 }
-
-
+#menuList {
+    display: block;
+}
+.menu_icon{
+    display: none;
+    padding-right: 30px;
+}
+#mobile_nav {
+    display: none;
+    position: absolute; 
+    top: 125px;
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
 /* topnav end */
 
 /* main header start */
@@ -134,8 +147,7 @@ ul li a:hover{
     width: 100%;
     background-image: url("https://media.wired.com/photos/6580ba9fc9d019ec4391c2b9/191:100/w_1280,c_limit/Reuelto_Grigio%20Telesto_001.jpg");
     background-size: cover;
-    background-position: center;
-        
+    background-position: center;  
 }
 
 .main_text{
@@ -807,22 +819,34 @@ img{
     margin: 30px 0px 30px 0px;
     text-align: center;
 }
-
 /* footer end */
+
 
 
 
 /************ Media Query Start**********/
 @media screen and (max-width:992px)
 {
-    /* --- topnav start -- */
-    .list_items{
+    .menu_icon{
+        display: block;
+        color: white;
+        font-size: 1.5rem;
+    } 
+    #menuList{
         display: none;
-        margin-right: 70px;
-        gap: 30px;
-        list-style-type: none;
+    }
+
+    #mobile_nav {
+        display: none;
+        background: rgb(61, 211, 216);
+    }
+    
+    #mobile_nav a:hover{
+        background-color: #a9aba8;
+        border-radius: 3px;
     }
     /* --- topnav end --- */
+
 
     /* --- main header start --- */
     .main_text{
@@ -832,24 +856,10 @@ img{
         gap: 10px;
         padding: 100px 0px 0px 100px; 
     }
-    /* --- main header end --- */
     
-    /* Dropdown menu start */
-    .navlogo{
-        display: flex;
-        margin-left: 20px;
-        gap: 10px;
-        align-items: center;
-    }
-    .toggle-menu{
-        display: flex;
-        margin-right: 30px;
-        padding: 10px;
-        height: 40px;
-        width: 40px;
-    }
-    /* --- Dropdown menu end --- */
+    /* --- main header end --- */
 }
+
 
 @media screen and (max-width:768px)
 {
